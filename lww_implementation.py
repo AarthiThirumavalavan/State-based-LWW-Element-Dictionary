@@ -1,6 +1,6 @@
 from threading import RLock
 
-class LWW_implementation(LWW):
+class LWW_implementation:
     
     def _init_(self):
         self.add_set = {}
