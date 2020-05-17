@@ -1,4 +1,4 @@
-from threading import Rlock
+from threading import RLock
 
 class LWW:
     
