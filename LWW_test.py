@@ -1,6 +1,10 @@
 from lww_implementation import LWW_implementation as LWW
 
 def test_add():
+    '''
+    Purpose: This function tests if an element has been added successfully to the LWW
+    '''
+    
     lww = LWW()
     lww.add(1)
     lww.add("test variable")
@@ -10,6 +14,10 @@ def test_add():
     assert not lww.exist("dummy")
     
 def test_remove():
+    '''
+    Purpose: This function tests if an element has been removed successfully from the LWW
+    '''
+    
     lww = LWW()
     lww.remove(1)
     
@@ -19,6 +27,10 @@ def test_remove():
     assert lww.exist(1)
     
 def test_merge():
+    '''
+    Purpose: This function tests functionality of merge method
+    '''
+    
     lww_1 = LWW()
     lww_2 = LWW()
     
@@ -38,8 +50,11 @@ def test_merge():
     assert lww.add_set[3] < lww1.remove_set[3]
     assert lww.remove_set[1] == lww2.remove_set[1]
     
-def test_value_internal():
-
+def test_validate_timestamp():
+    '''
+    Purpose: This function validates timestamps of the elements
+    '''
+    
     lww = LWW()
 
     lww.add(1)
@@ -54,6 +69,10 @@ def test_value_internal():
     assert lww.remove_set[2] > lww.remove_set[4]
     
 def test_repeated_add():
+    '''
+    Purpose: This function checks repeated addition of same element
+    '''
+    
     lww = LWW()
     
     lww.add(1)
@@ -64,6 +83,9 @@ def test_repeated_add():
     assert not lww.exist(1)
     
 def test_repeated_remove():
+    '''
+    Purpose: This function checks repeated removal of same element
+    '''
 
     lww = LWW()
 
@@ -74,6 +96,9 @@ def test_repeated_remove():
     assert not lww.exist(1)
     
 def test_remove_add():
+    '''
+    Purpose: This function checks remove operation followed by addition operation
+    '''
 
     lww = LWW()
 
